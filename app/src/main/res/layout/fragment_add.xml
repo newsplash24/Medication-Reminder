@@ -1,0 +1,210 @@
+<ScrollView
+    tools:context=".FragmentAdd"
+    xmlns:fbutton="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/button_material_light"
+    android:padding="5dp"
+    >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+
+
+    >
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <LinearLayout
+        android:id="@+id/mName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:paddingLeft="5dp">
+
+        <TextView
+            android:id="@+id/MedicationLabel"
+            android:layout_weight="0.5"
+            android:layout_width="0dp"
+            android:fontFamily="sans-serif-condensed"
+            android:layout_height="wrap_content"
+            android:text="Medication: "
+            android:textSize="17dp" />
+
+        <EditText
+            android:id="@+id/MedicationInput"
+            android:layout_weight="0.5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mName"
+        android:id="@+id/mType"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:paddingLeft="5dp">
+
+        <TextView
+            android:id="@+id/MedicationTLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Type: "
+            android:textSize="17dp" />
+
+
+        <EditText
+            android:id="@+id/MedicationTInput"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"
+
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mType"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:id="@+id/mDosage"
+        android:paddingLeft="5dp">
+
+        <TextView
+            android:id="@+id/MedicationDabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Dosage: "
+            android:textSize="17dp" />
+
+
+        <EditText
+            android:id="@+id/MedicationDnput"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"
+
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mDosage"
+
+        android:orientation="horizontal"
+        android:id="@+id/mDate"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="20dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mDosage"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:id="@+id/mProduction"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/MedicationPDabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Production Date: "
+            android:textSize="17dp" />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/setProductionDate"
+
+            android:onClick="setProductionDate"
+            android:background="@drawable/calender_icon" />
+
+    </LinearLayout>
+
+        <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mProduction"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:id="@+id/mExpiry"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/MedicationEDabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Expiry Date: "
+            android:textSize="17dp" />
+        <!--<View-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_weight="0.5"-->
+        <!--/>-->
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/setExpiryDate"
+            android:onClick="setProductionDate"
+            android:background="@drawable/calender_icon" />
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+
+    <info.hoang8f.widget.FButton
+        android:layout_width="90dp"
+        android:layout_height="43dp"
+        android:text="Save"
+        android:id="@+id/save"
+        android:onClick="save"
+        fbutton:buttonColor="@color/fbutton_color_peter_river"
+        fbutton:shadowColor="@color/fbutton_color_belize_hole"
+        fbutton:shadowEnabled="true"
+        fbutton:shadowHeight="2dp"
+        fbutton:cornerRadius="5dp"
+        android:textColor="#fffffffb"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/mDate"
+        android:layout_marginTop="20dp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/save"
+        android:layout_marginTop="20dp"
+        android:id="@+id/output" />
+
+
+
+
+</RelativeLayout>
+    </ScrollView>
